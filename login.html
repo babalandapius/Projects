@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Busitema University | Login Form</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="container">
+      <h2>Login In Form</h2>
+      <div class="login-inputs">
+        <p id="wrong-details"></p>
+        <label for="username">Username</label>
+          <input id="js-username" type="text" required>
+        <label for="password">Password</label>
+          <input id="js-password" type="password">
+        <button onClick="handleLogin();">Login</button>
+      </div>
+    <p>Don't have an account? </p>
+    <button id="js-new-account">Create Account</button>
+  </div>
+  <div id="register-overlay" class="overlay-hidden">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeRegister();">&times;</span>
+      <h2>Create Account</h2>
+      <div class="login-inputs">
+        <label for="username">Username</label>
+        <input type="text" id="reg-username" required>
+        <label for="email">Email</label>
+        <input type="email" id="reg-email" required>
+        <label for="password">Password</label>
+        <input type="password" id="reg-password" required>
+        <button id="js-signup-confirm" onclick="registerUser();">Register</button>
+      </div>
+    </div>
+  </div>
+  <script src="login.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
