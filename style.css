@@ -293,3 +293,83 @@ footer section label span {
   color: rgb(0, 0, 0);
   font-weight: 800;
 }
+
+@media screen and (max-width: 900px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .nav-links {
+    margin-top: 10px;
+    margin-right: 0;
+  }
+  .side-bar {
+    display: none;
+    position: static;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .user-info {
+    flex-direction: row;
+    gap: 20px;
+    width: auto;
+  }
+  .search-section {
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 0;
+  }
+  #gradient {
+    margin-left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .news-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    padding-left: 10px;
+  }
+  .news-section .quick-links {
+    display: flex;
+    align-items: center;
+  }
+  .news-section .quick-links button {
+    width: 500px;
+    margin-top: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  .news-section .quick-links button span {
+    margin-right: 70px;
+    font-size: 30px;
+  }
+  #quick-btns {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    padding-left: 10px;
+  }
+  #quick-btns section {
+    width: 500px;
+  }
+  .our-services-div {
+    margin-left: 0;
+  }
+  footer {
+    margin-left: 0;
+  }
+  
+}
