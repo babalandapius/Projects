@@ -10,6 +10,43 @@ const courses = [
   {courseName: 'Bachelors of Computer Science', campus: 'Nagongera', studyHours: 'Day'}
 ];
 
+const coursesSection = document.querySelector('.online-courses-section');
+const learningSection = document.getElementById('learning-section');
+learningSection.addEventListener('click', () => {
+  loadCourses();
+});
+
+async function loadCourses() {
+  if(!coursesSection) return;
+ if(coursesSection.classList.contains('show')) {
+  coursesSection.classList.remove('show');
+
+  setTimeout(() => {
+    coursesSection.innerHTML = '';
+  }, 500);
+  return;
+ }
+  coursesSection.innerHTML = 'loading';
+  try {
+  const results = await fetch('courses.html');
+  if(!results.ok) {
+    throw new Error('Error found');
+  }
+
+  const coursesDiv = await results.text();
+  coursesSection.innerHTML = coursesDiv;
+
+  setTimeout(() => {
+    coursesSection.classList.add('show')
+  }, 10);
+
+  } catch (err) {
+    console.error("Failed to load the page content", err);
+    coursesSection.innerHTML = "Failed to load the Courses, Refresh and try again";
+  }
+
+}
+
 // 2. Element Selection
 const profileButton = document.getElementById('profile-btn');
 const lectureBtn = document.getElementById('js-lectureBtn');
@@ -62,6 +99,7 @@ if (courseUnitsBtn) {
 if (loginButton) {
   loginButton.addEventListener('click', (e) => {
     e.preventDefault();
+    localStorage.removeItem('isLoggedIn');
     window.location.href = 'login.html';
   });
 }

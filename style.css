@@ -296,19 +296,21 @@ footer section label span {
 
 @media screen and (max-width: 900px) {
   header {
+    background-color: #2f38b4;
     flex-direction: column;
     padding: 10px;
     position: sticky;
     left: 0;
+    right: 0;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 0;
   }
-  .nav-links {
+  .nav-links a{
     margin-top: 10px;
-    margin-right: 0;
+    font-size: 19px;
   }
   .side-bar {
     display: none;
@@ -370,6 +372,19 @@ footer section label span {
   }
   footer {
     margin-left: 0;
+  }
+
+  .online-courses-section {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .fade-content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .online-courses-section.show {
+    opacity: 1;
   }
   
 }
