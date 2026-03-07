@@ -296,9 +296,6 @@ footer section label span {
 
 @media screen and (max-width: 900px) {
   header {
-    background-color: #2f38b4;
-    flex-direction: column;
-    padding: 10px;
     position: sticky;
     left: 0;
     right: 0;
@@ -306,7 +303,9 @@ footer section label span {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0;
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
   }
   .nav-links a{
     margin-top: 10px;
@@ -320,18 +319,14 @@ footer section label span {
     flex-direction: row;
     justify-content: space-around;
   }
-  .user-info {
-    flex-direction: row;
-    gap: 20px;
-    width: auto;
-  }
+
   .search-section {
     flex-direction: column;
     gap: 10px;
-    margin-left: 0;
+    margin: 10px;
   }
   #gradient {
-    margin-left: 0;
+    margin: 0;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -339,15 +334,18 @@ footer section label span {
   .news-section {
     display: flex;
     flex-direction: column;
-    margin-left: 0;
+    margin: 0;
     padding-left: 10px;
   }
   .news-section .quick-links {
     display: flex;
     align-items: center;
+    width: 400px;
+    align-self: center;
+    padding: 15px 0px;
   }
   .news-section .quick-links button {
-    width: 500px;
+    width: 450px;
     margin-top: 15px;
     font-weight: 600;
     display: flex;
