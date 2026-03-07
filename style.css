@@ -150,7 +150,7 @@ td a:hover {
   padding-left: 30px;
   color: white;
   background: linear-gradient(to right, rgba(0, 0, 100, 2), transparent),
-  url(images/images.jpeg);
+  url('images/pexels-arina-krasnikova-5712529.jpg');
   background-position: center;
   background-size: cover;
   margin-left: 310px;
@@ -272,7 +272,7 @@ footer {
   background: linear-gradient(to right, rgba(0, 0,0,0.9),
   transparent
   ),
-  url(images/images.jpeg);
+  url('images/pexels-pixabay-356056\ \(1\).jpg');
   background-position: center;
   background-size: cover;
   margin-left: 310px;
@@ -359,17 +359,17 @@ footer section label span {
   #quick-btns {
     display: flex;
     flex-direction: column;
-    margin-left: 0;
+    margin: 0;
     padding-left: 10px;
   }
   #quick-btns section {
     width: 500px;
   }
   .our-services-div {
-    margin-left: 0;
+    margin: 0;
   }
   footer {
-    margin-left: 0;
+    margin: 0;
   }
 
   .online-courses-section {
