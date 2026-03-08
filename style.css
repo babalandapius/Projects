@@ -209,6 +209,10 @@ td a:hover {
   border-radius: 10px;
   margin-left: 310px;
 }
+.news-section .quick-links button span {
+  margin-right: 40px;
+  font-size: 30px;
+}
 .news-info {
   display: flex;
   flex-direction: column;
@@ -267,6 +271,9 @@ td a:hover {
   cursor: pointer;
   border: 2px solid black;
 }
+.our-services-div p {
+  font-size: 40px;
+}
 
 footer {
   background: linear-gradient(to right, rgba(0, 0,0,0.9),
@@ -311,6 +318,15 @@ footer section label span {
     margin-top: 10px;
     font-size: 19px;
   }
+  .search-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .search-section #search-bar {
+    width: 200px;
+    align-self: center;
+  }
   .side-bar {
     display: none;
     position: static;
@@ -334,18 +350,21 @@ footer section label span {
   .news-section {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding-left: 10px;
+    align-items: center;
+    margin: 10px 0px;
+    padding: 10px 10px;
+    border-radius: 0px;
   }
   .news-section .quick-links {
     display: flex;
     align-items: center;
-    width: 400px;
+    width: 380px;
     align-self: center;
     padding: 15px 0px;
+    margin: 10px 20px;
   }
   .news-section .quick-links button {
-    width: 450px;
+    width: 350px;
     margin-top: 15px;
     font-weight: 600;
     display: flex;
@@ -353,23 +372,32 @@ footer section label span {
     align-items: center;
   }
   .news-section .quick-links button span {
-    margin-right: 70px;
+    margin-right: 40px;
     font-size: 30px;
   }
   #quick-btns {
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 10px 0px;
     padding-left: 10px;
   }
   #quick-btns section {
-    width: 500px;
+    width: 350px;
   }
   .our-services-div {
-    margin: 0;
+    margin: 10px 16px;
+    background-color: white;
+    border-radius: 8px;
+  }
+  .our-services-div h2 {
+    margin-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: blue;
   }
   footer {
     margin: 0;
+    padding: 10px;
   }
 
   .online-courses-section {
