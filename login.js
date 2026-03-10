@@ -14,9 +14,17 @@ function registerUser() {
     const mail = document.getElementById('js-email').value;
     const pass = document.getElementById('js-password').value;
 
+
   if(user === '' || mail === '' || pass === '') {
     alert("All Input fields should be filled");
   } else {
+      const userData = {
+      username: user,
+      password: pass
+    };
+    localStorage.setItem('regpsteredUser', JSON.stringify(userData));
+
+    alert('Registration Success! you can Login In');
     closeRegister();
   }
 }
