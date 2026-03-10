@@ -54,6 +54,10 @@ const timeTableButton = document.getElementById('js-time-table-btn');
 const courseUnitsBtn = document.getElementById('js-course-unit-btn');
 const logoutBtn = document.getElementById('js-logout-btn');
 const loginButton = document.getElementById('js-login-button');
+const academicsLink = document.getElementById('academics');
+const aboutLink = document.getElementById('about');
+const faqsLink = document.getElementById('faqs');
+const blogLink = document.getElementById('blog');
 
 
 if (logoutBtn) {
@@ -101,6 +105,34 @@ if (loginButton) {
     e.preventDefault();
     localStorage.removeItem('isLoggedIn');
     window.location.href = 'login.html';
+  });
+}
+
+if (academicsLink) {
+  academicsLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    loadPage('academics');
+  });
+}
+
+if (aboutLink) {
+  aboutLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    loadPage('about');
+  });
+}
+
+if (faqsLink) {
+  faqsLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    loadPage('faqs');
+  });
+}
+
+if (blogLink) {
+  blogLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    loadPage('blog');
   });
 }
 
