@@ -148,11 +148,19 @@ function handleLogin() {
   const password = document.getElementById('js-password').value;
   const wrongDetailsArea = document.getElementById('wrong-details');
 
-  if (username === 'admin' && password === 'admin1234') {
+  //Get the  stored user from the local storage using JOIN.Parse() method of arrays.
+  const storedUser = JSON.parse(localStorage.getItem('registeredUser'));
+
+  const isAdmin = (username === 'admin' && password === 'admin1234');
+  const isRegisteredUser = (storedUser && username === storedUser.name);
+
+  if (isAdmin || isRegisteredUser) {
     localStorage.setItem('isLoggedIn', 'true');
     window.location.href = 'index.html';
   } else {
-    wrongDetailsArea.textContent = "Invalid credentials entered!";
+    if (wrongDetailsArea) {
+      wrongDetailsArea.textContent = "Wrong username or password. Please try again.";
+    }
   }
 }
 
