@@ -187,3 +187,78 @@ async function loadPage(pageName) {
     container.innerHTML = "Error: Could not load the page content.";
   }
 }
+
+
+
+// 1. My image array
+const sliderImages = [
+  'images/pexels-fauxels-3184460.jpg',
+    'images/pankaj-patel-u2Ru4QBXA5Q-unsplash.jpg',
+    'images/pexels-technobulka-8022861.jpg',
+    'images/pexels-pixabay-356056.jpg',
+    'images/pexels-arina-krasnikova-5712529.jpg'
+];
+
+let currentIndex = 0;
+const wrapper = document.getElementById('slider-wrapper');
+
+// 2. Function to build the slider HTML
+function initSlider() {
+    if (!wrapper) return;
+    
+    // Inject images from the array
+    wrapper.innerHTML = sliderImages.map(img => `<img src="${img}" alt="Campus">`).join('');
+}
+
+// 3. Function to move the slider
+function moveSlider() {
+    // We move the wrapper to the left by 100% multiplied by the index
+    const offset = -currentIndex * 100;
+    wrapper.style.transform = `translateX(${offset}%)`;
+}
+
+// 4. Event Listeners for buttons
+document.getElementById('nextBtn')?.addEventListener('click', () => {
+    currentIndex++;
+    // Loop back to start if at the end
+    if (currentIndex >= sliderImages.length) {
+        currentIndex = 0;
+    }
+    moveSlider();
+});
+
+document.getElementById('prevBtn')?.addEventListener('click', () => {
+    currentIndex--;
+    // Go to end if at the start
+    if (currentIndex < 0) {
+        currentIndex = sliderImages.length - 1;
+    }
+    moveSlider();
+});
+
+setInterval(() => {
+    document.getElementById('nextBtn').click();
+}, 5000);
+
+// Initialize on load
+initSlider();
+
+
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+const icon = hamburger.querySelector('i'); // Get the <i> tag inside
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        // 1. Slide the menu
+        navLinks.classList.toggle('active');
+        
+        // 2. Change the icon
+        if (navLinks.classList.contains('active')) {
+            icon.classList.replace('fa-bars', 'fa-xmark');
+        } else {
+            icon.classList.replace('fa-xmark', 'fa-bars');
+        }
+    });
+}

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BU | Home Page</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
   <header>
@@ -14,6 +15,9 @@
       </div>
       <h1>Busitema University ICT Department</h1>
     </section>
+    <div class="hamburger" id="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
     <nav class="nav-links">
       <span></span>
       <a href="index.html" id="home">Home</a>
@@ -24,6 +28,13 @@
       <button id="js-login-button">Login</button>
     </nav>
   </header>
+  <div class="slider-container">
+    <div class="slider-wrapper" id="slider-wrapper">
+        </div>
+    
+    <button class="slider-btn prev" id="prevBtn">&#10094;</button>
+    <button class="slider-btn next" id="nextBtn">&#10095;</button>
+</div>
   <aside class="side-bar">
     <div class="user-info">
       <img src="images/images.jpeg" alt="user image">
@@ -154,6 +165,7 @@
       <label for="location">📍 <span>Location</span>: ICT Center, New Building, conference hall</label>
     </section>
   </footer>
+  <div class="menu-overlay" id="menu-overlay"></div>
   <script src="script.js"></script>
   <script src="login.js"></script>
 </body>
